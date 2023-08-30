@@ -18,7 +18,7 @@ public class ChromeTest {
     String planningDate = generateDate(4, "dd.MM.yyyy");
 
     @Test
-    void DeliveryCardPositiveTest() {
+    void deliveryCardPositiveTest() {
         open("http://localhost:9999");
         $("[data-test-id=city] input").setValue("Москва");
         $("[data-test-id=date] input").doubleClick().sendKeys(planningDate);
@@ -31,7 +31,7 @@ public class ChromeTest {
     }
 
     @Test
-    void DeliveryCardNegativeCityTest() {
+    void deliveryCardNegativeCityTest() {
         open("http://localhost:9999");
         $("[data-test-id=city] input").setValue("Светлогорск");
         $("[data-test-id=date] input").doubleClick().sendKeys(planningDate);
@@ -44,7 +44,7 @@ public class ChromeTest {
     }
 
     @Test
-    void DeliveryCardEmptyCityTest() {
+    void deliveryCardEmptyCityTest() {
         open("http://localhost:9999");
         $("[data-test-id=date] input").doubleClick().sendKeys(planningDate);
         $("[data-test-id=name] input").setValue("Молодцова Дарья");
@@ -56,7 +56,7 @@ public class ChromeTest {
     }
 
     @Test
-    void DeliveryCardEmptyDateTest() {
+    void deliveryCardEmptyDateTest() {
         open("http://localhost:9999");
         $("[data-test-id=city] input").setValue("Москва");
         $("[data-test-id=date] input").doubleClick().sendKeys(Keys.BACK_SPACE);
@@ -69,7 +69,7 @@ public class ChromeTest {
     }
 
     @Test
-    void DeliveryCardNegativeDateTest() {
+    void deliveryCardNegativeDateTest() {
         open("http://localhost:9999");
         $("[data-test-id=city] input").setValue("Москва");
         $("[data-test-id=date] input").doubleClick().sendKeys(generateDate(0, "dd.MM.yyyy"));
@@ -82,7 +82,7 @@ public class ChromeTest {
     }
 
     @Test
-    void DeliveryCardNegativeNameTest() {
+    void deliveryCardNegativeNameTest() {
         open("http://localhost:9999");
         $("[data-test-id=city] input").setValue("Москва");
         $("[data-test-id=date] input").doubleClick().sendKeys(planningDate);
@@ -95,7 +95,7 @@ public class ChromeTest {
     }
 
     @Test
-    void DeliveryCardEmptyNameTest() {
+    void deliveryCardEmptyNameTest() {
         open("http://localhost:9999");
         $("[data-test-id=city] input").setValue("Москва");
         $("[data-test-id=date] input").doubleClick().sendKeys(planningDate);
@@ -107,7 +107,7 @@ public class ChromeTest {
     }
 
     @Test
-    void DeliveryCardNegativePhoneTest() {
+    void deliveryCardNegativePhoneTest() {
         open("http://localhost:9999");
         $("[data-test-id=city] input").setValue("Москва");
         $("[data-test-id=date] input").doubleClick().sendKeys(planningDate);
@@ -120,7 +120,7 @@ public class ChromeTest {
     }
 
     @Test
-    void DeliveryCardEmptyPhoneTest() {
+    void deliveryCardEmptyPhoneTest() {
         open("http://localhost:9999");
         $("[data-test-id=city] input").setValue("Москва");
         $("[data-test-id=date] input").doubleClick().sendKeys(planningDate);
